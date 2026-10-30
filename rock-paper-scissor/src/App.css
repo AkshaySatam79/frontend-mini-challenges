@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300..700&family=Nunito:wght@200..1000&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: aliceblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container h1 {
+  color: green;
+  position: relative;
+  top: -200px;
+  font-family: Roboto;
+  padding-top: 150px;
+}
+.options {
+  display: flex;
+  position: relative;
+  top: -150px;
+  gap: 30px;
+}
+
+.rock,
+.paper,
+.scissor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+
+  border: 2px solid #000;
+  border-radius: 10px;
+
+  color: white;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 0 #000;
+  transition: 0.1s ease;
+}
+
+/* Rock */
+.rock {
+  background-color: #8b5e3c;
+}
+
+.rock:hover {
+  background-color: #a06b45;
+}
+
+/* Paper */
+.paper {
+  background-color: #3b82f6;
+}
+
+.paper:hover {
+  background-color: #60a5fa;
+}
+
+/* Scissor */
+.scissor {
+  background-color: #ef4444;
+}
+
+.scissor:hover {
+  background-color: #f87171;
+}
+
+/* Pop effect */
+.rock:hover,
+.paper:hover,
+.scissor:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #000;
+}
+
+.rock:active,
+.paper:active,
+.scissor:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #000;
+}
+
+.show-results {
+  position: relative;
+  top: -80px;
+  left: -80px;
+}
+.show-results h2 {
+  margin-bottom: 30px;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 400;
+  color: green;
+}
+
+.user-choice {
+  color: #3b82f6;
+  font-family: poppins;
+  font-weight: 500;
+}
+.com-choice {
+  color: #ef4444;
+  font-family: poppins;
+  font-weight: 500;
+}
+
+.show-results .draw {
+  color: #eab308;
+  position: relative;
+  left: 180px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1.4rem;
+}

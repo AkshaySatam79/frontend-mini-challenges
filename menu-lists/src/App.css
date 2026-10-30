@@ -1,0 +1,188 @@
+.menu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+  min-height: 100vh;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.menu-eyebrow {
+  color: #c59d5f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.menu-header h1 {
+  font-size: 40px;
+  color: #102a42;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+  font-family: Georgia, serif;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #c59d5f;
+  margin: 0 auto;
+}
+
+.menu-subtitle {
+  color: #617d98;
+  margin: 14px 0 0;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 42px;
+  flex-wrap: wrap;
+}
+
+.menu-buttons button {
+  background: transparent;
+  border: 2px solid #c59d5f;
+  color: #c59d5f;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-buttons button:focus-visible,
+.retry-button:focus-visible {
+  outline: 3px solid #102a42;
+  outline-offset: 3px;
+}
+
+.menu-buttons button:hover,
+.menu-buttons button.active {
+  background: #c59d5f;
+  color: white;
+}
+
+.menu-state {
+  color: #617d98;
+  margin: 48px auto;
+  text-align: center;
+}
+
+.menu-error {
+  color: #9c2c2c;
+}
+
+.retry-button {
+  background: #c59d5f;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  margin-top: 8px;
+  padding: 9px 16px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+}
+
+.menu-card {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-card img {
+  width: 225px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #c59d5f;
+  border-radius: 5px;
+}
+
+.menu-info {
+  flex: 1;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px dotted #617d98;
+  padding-bottom: 10px;
+}
+
+.menu-title h2 {
+  color: #102a42;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.menu-title span {
+  color: #c59d5f;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu-info .recipe-meta {
+  color: #c59d5f;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+.menu-info p {
+  color: #617d98;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-container {
+    width: 95%;
+    padding: 40px 0;
+  }
+
+  .menu-header h1 {
+    font-size: 32px;
+  }
+
+  .menu-subtitle {
+    font-size: 14px;
+  }
+
+  .menu-card {
+    flex-direction: column;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .menu-title h2 {
+    font-size: 15px;
+  }
+}
