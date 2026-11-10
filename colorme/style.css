@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(151, 95, 203);
+  text-shadow: 0 4px 12px;
+}
+
+.main {
+  margin-top: 80px;
+}
+
+.main p {
+  font-size: 20px;
+  color: rgb(151, 95, 203);
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.boxes {
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 0 4px 12px rgb(193, 192, 192);
+}
+
+/* .box:hover{
+  background-color:rgb(151, 95, 203);
+  color: #f9f9f9;
+} */
+
+.highlight{
+  background-color:rgb(151, 95, 203);
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #0000001a;
+  margin-bottom: 80px;
+}
+
+p{
+  font-size: 18px;
+  font-weight: 900;
+} 
+
+input{
+width: 390px;
+height: 30px;
+color: black;
+font-size: 18px;
+padding-left: 15px;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.or-divider span {
+  padding: 0 10px;
+  font-weight: 600;
+  color: #090909;
+  font-size: 20px;
+}
+
+
+
+button{
+  height: 40px;
+  background-color: rgb(162, 65, 252);
+  border: none;
+  border-radius: 6px;
+  color: #f9f9f9;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button:hover{
+   background-color: rgb(151, 95, 203);
+   color: blueviolet;
+}
