@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-sans text-slate-700 antialiased bg-cream dark:bg-night-900 dark:text-slate-200;
+    transition: background-color .4s ease, color .4s ease;
+  }
+  ::selection { background: #ffc9dd; color: #4a1230; }
+}
+
+@layer components {
+  .glass { @apply bg-white/65 dark:bg-night-800/60 backdrop-blur-xl border border-white/70 dark:border-white/10; }
+  .card { @apply rounded-3xl bg-white dark:bg-night-800 shadow-soft border border-lav-100/70 dark:border-white/5; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 font-bold transition-all duration-300 select-none disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-lav-300/60; }
+  .btn-primary { @apply btn text-white bg-gradient-to-r from-blush-400 to-lav-400 shadow-pink hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0; }
+  .btn-soft { @apply btn bg-white/80 dark:bg-white/10 text-lav-500 dark:text-lav-200 border border-lav-200/70 dark:border-white/10 hover:bg-lav-50 dark:hover:bg-white/15 hover:-translate-y-0.5; }
+  .chip { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-bold bg-lav-100 text-lav-500 dark:bg-lav-500/20 dark:text-lav-200; }
+  .input { @apply w-full rounded-full bg-white/80 dark:bg-white/10 border border-lav-200/70 dark:border-white/10 px-5 py-3 outline-none focus:ring-4 focus:ring-lav-300/50 placeholder:text-slate-400 transition; }
+  .section-title { @apply font-display font-extrabold text-4xl sm:text-5xl text-slate-800 dark:text-white tracking-tight; }
+  .gradient-text { @apply bg-gradient-to-r from-blush-400 via-lav-400 to-peach-300 bg-clip-text text-transparent; }
+}
+
+.skeleton { position: relative; overflow: hidden; @apply bg-lav-100/70 dark:bg-white/10; }
+.skeleton::after {
+  content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
+  animation: shimmer 1.6s infinite;
+}
+.dark .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
