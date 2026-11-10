@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import { Footer, Navbar } from './components/Navbar'
 import { PawBackground } from './components/common'
 import { SurpriseModal } from './components/SurpriseModal'
@@ -55,6 +56,7 @@ export default function App() {
       </main>
       <Footer />
       <SurpriseModal open={surprise} onClose={closeSurprise} />
+      <Analytics />
     </div>
   )
 }

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "framer-motion": "^14.9.1",
     "lucide-react": "^1.69.0",
     "react": "^19.3.1",
