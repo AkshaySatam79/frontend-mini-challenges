@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Greeting Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="greeting-card">
+
+      <header>
+        <p class="tag">PERSONALIZED GREETINGS</p>
+
+        <h2>👋 Greeting Generator</h2>
+
+        <p class="subtitle">
+          Create a personalized greeting in seconds.
+        </p>
+      </header>
+
+      <main>
+
+        <div class="names">
+
+          <div class="form-group">
+            <label for="firstname">First Name *</label>
+            <input type="text" id="firstname" placeholder="e.g. Akshay" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name *</label>
+            <input type="text" id="lastname" placeholder="e.g. Satam" required>
+          </div>
+
+        </div>
+
+        <div class="form-group time-group">
+
+          <label for="time-of-day">Time of Day *</label>
+
+          <select name="time" id="time-of-day" required>
+
+            <option value="" selected disabled>
+              Select time of day
+            </option>
+
+            <option value="Morning">
+              🌄 Morning
+            </option>
+
+            <option value="Afternoon">
+              ☀️ Afternoon
+            </option>
+
+            <option value=" Evening">
+              🌙 Evening
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div id="result" class="result"></div>
+        <button type="button" id="generateBtn">
+          ➜ Generate Greeting
+        </button>
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

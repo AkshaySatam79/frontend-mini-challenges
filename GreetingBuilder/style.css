@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #c2c9ff,
+        #f1e6ff 50%,
+        #ffd9d6
+    );
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: calc(100vh - 48px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px;
+    border: 6px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        rgba(155, 170, 255, 0.45),
+        rgba(255, 235, 255, 0.65),
+        rgba(255, 190, 190, 0.45)
+    );
+    box-shadow: 0 15px 50px rgba(90, 75, 140, 0.12);
+}
+
+/* =========================
+   GREETING CARD
+========================= */
+
+.greeting-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 50px 45px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(60, 50, 120, 0.12);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 16px;
+    margin-bottom: 18px;
+    border-radius: 30px;
+    background: #eef0ff;
+    color: #6158ed;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    color: #20283b;
+    font-size: clamp(23px, 3vw, 30px);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #9299a9;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.names {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    min-width: 0;
+}
+
+label {
+    display: block;
+    color: #333b4e;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #e1e5ee;
+    border-radius: 11px;
+    outline: none;
+    background: #fff;
+    color: #444;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+input::placeholder {
+    color: #a0a7b5;
+}
+
+input:hover,
+select:hover {
+    border-color: #aaa5ff;
+}
+
+input:focus,
+select:focus {
+    border-color: #6559f5;
+    box-shadow: 0 0 0 4px rgba(99, 91, 255, 0.10);
+}
+
+/* =========================
+   SELECT DROPDOWN
+========================= */
+
+select {
+    cursor: pointer;
+}
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+button {
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(
+        90deg,
+        #5145e9,
+        #7165f6
+    );
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(81, 69, 233, 0.23);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(81, 69, 233, 0.30);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   GREETING RESULT
+========================= */
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f4f3ff;
+    color: #2a1bf9;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Hide empty result */
+.result:empty {
+    display: none;
+}
+
+/* =========================
+   LARGE LAPTOP SCREENS
+========================= */
+
+@media (min-width: 1200px) {
+    body {
+        padding: 30px;
+    }
+
+    .container {
+        min-height: calc(100vh - 60px);
+        padding: 70px;
+    }
+
+    .greeting-card {
+        max-width: 560px;
+        padding: 55px 50px;
+    }
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        min-height: calc(100vh - 30px);
+        padding: 40px 20px;
+        border-radius: 22px;
+    }
+
+    .greeting-card {
+        max-width: 480px;
+        padding: 40px 30px;
+    }
+
+    header {
+        margin-bottom: 28px;
+    }
+}
+
+/* =========================
+   MOBILE PHONES
+========================= */
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        min-height: calc(100vh - 20px);
+        padding: 25px 12px;
+        border-width: 4px;
+        border-radius: 18px;
+    }
+
+    .greeting-card {
+        padding: 30px 20px;
+        border-radius: 18px;
+    }
+
+    header h2 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .names {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    input,
+    select {
+        min-height: 46px;
+        font-size: 13px;
+    }
+
+    button {
+        min-height: 48px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 350px) {
+    .greeting-card {
+        padding: 25px 15px;
+    }
+
+    header h2 {
+        font-size: 19px;
+    }
+
+    .tag {
+        font-size: 9px;
+    }
+}
